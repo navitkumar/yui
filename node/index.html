@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+<title>YUI Testing ...</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+ <script src="http://yui.yahooapis.com/3.16.0/build/yui/yui-min.js"></script>
+ <script>
+// Create a new YUI sandbox and load the "node" module.
+YUI().use('node', function (Y) {
+    // YUI will call this function and pass in the YUI instance (Y) once all
+    // modules have finished loading and are ready to use.
+
+    // We can now use Y.Node to get references to DOM elements using CSS
+    // selectors.
+    var demo = Y.one('#demo');
+
+    // And we can listen for DOM events.
+    demo.on('click', function () {
+        demo.set('text', 'You clicked me!');
+        alert(demo.get('text'));
+    });
+});
+</script>
+</head>
+<body>
+    <div id="wrapper">
+ <div id="demo">Click me</div>
+</div>
+</body>
+</html>
